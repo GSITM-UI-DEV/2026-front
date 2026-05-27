@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1Q&2Q 전략과제 중간점검 - 프론트개발팀</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff;
+    --bg-subtle: #f7f7f5;
+    --bg-hover: #f1f1ef;
+    --border: #e9e9e7;
+    --text-primary: #191919;
+    --text-secondary: #5a5a5a;
+    --text-muted: #9b9b9b;
+    --accent: #2f6de0;
+    --accent-bg: #eef3fd;
+    --tag-ai-bg: #e8f5e9; --tag-ai-text: #2e7d32;
+    --tag-ds-bg: #e8eaf6; --tag-ds-text: #3949ab;
+    --tag-poc-bg: #fff3e0; --tag-poc-text: #e65100;
+  }
+  body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: var(--bg); color: var(--text-primary); max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; line-height: 1.7; }
+  .header { margin-bottom: 3rem; }
+  .header-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .header-title { font-size: 30px; font-weight: 600; letter-spacing: -0.5px; color: var(--text-primary); margin-bottom: 6px; }
+  .header-meta { font-size: 13px; color: var(--text-muted); display: flex; gap: 16px; }
+  .header-divider { margin-top: 1.5rem; border: none; border-top: 1.5px solid var(--text-primary); }
+  .section { margin-bottom: 3rem; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1.25rem; }
+  .section-badge { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+  .badge-task { background: var(--text-primary); color: #fff; }
+  .badge-work { background: var(--bg-subtle); color: var(--text-secondary); border: 1px solid var(--border); }
+  .section-title { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+  .section-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 1.5rem; }
+  .block { background: var(--bg-subtle); border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 12px; }
+  .block-title { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .block-tag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  .tag-ai  { background: var(--tag-ai-bg);  color: var(--tag-ai-text); }
+  .tag-ds  { background: var(--tag-ds-bg);  color: var(--tag-ds-text); }
+  .tag-poc { background: var(--tag-poc-bg); color: var(--tag-poc-text); }
+  .item-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .item { font-size: 13px; color: var(--text-secondary); display: flex; flex-direction: column; gap: 5px; }
+  .item-text { display: flex; align-items: flex-start; gap: 8px; }
+  .item-text::before { content: '·'; color: var(--text-muted); font-size: 16px; line-height: 1.4; flex-shrink: 0; }
+  .item-links { display: flex; flex-wrap: wrap; gap: 6px; padding-left: 16px; }
+  .link-chip { font-size: 11px; color: var(--accent); background: var(--accent-bg); padding: 2px 10px; border-radius: 20px; text-decoration: none; transition: opacity 0.15s; }
+  .link-chip:hover { opacity: 0.7; }
+  .date-badge { font-size: 11px; color: var(--text-muted); background: var(--bg-hover); border: 1px solid var(--border); padding: 2px 9px; border-radius: 20px; margin-left: auto; white-space: nowrap; }
+  .members { display: flex; align-items: center; gap: 6px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+  .members-label { font-size: 11px; color: var(--text-muted); font-weight: 500; margin-right: 2px; }
+  .member-chip { font-size: 11px; color: var(--text-secondary); background: var(--bg-hover); padding: 2px 9px; border-radius: 20px; border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <p class="header-eyebrow">중간점검 보고</p>
+  <h1 class="header-title">1Q & 2Q 전략과제</h1>
+  <div class="header-meta">
+    <span>📁 프론트개발팀</span>
+    <span>📅 2026</span>
+  </div>
+  <hr class="header-divider">
+</div>
+
+<!-- 세부실행과제 1 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-badge badge-task">세부실행과제 1</span>
+    <span class="section-title">프론트 Asset 개발</span>
+  </div>
+  <hr class="section-divider">
+  <div class="block">
+    <div class="block-title">AI 프로토타입 <span class="block-tag tag-ai">AI</span></div>
+    <ul class="item-list">
+      <li class="item">
+        <span class="item-text">Cursor plan 모드를 사용한 AI 바이브 코딩 컨텍스트 개발</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://notion.so/cursor-context">과제용 프로젝트 백엔드 컨텍스트</a>
+          <a class="link-chip" href="https://notion.so/cursor-frontend">프론트엔드 컨텍스트 개발</a>
+        </div>
+      </li>
+      <li class="item">
+        <span class="item-text">노코드 기반 AI agent 개발 툴 n8n 리서치 및 스터디</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://notion.so/n8n-local-test">n8n 로컬 테스트</a>
+        </div>
+      </li>
+      <li class="item">
+        <span class="item-text">로컬 모델 기반 LLM 리서치 및 스터디</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://notion.so/ollama-llm">Ollama 기반 로컬 LLM 관련 노션</a>
+        </div>
+      </li>
+      <li class="item">
+        <span class="item-text">하네스 엔지니어링 리서치</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://notion.so/harness-research">하네스 엔지니어링 리서치</a>
+        </div>
+      </li>
+      <li class="item">
+        <span class="item-text">하네스 엔지니어링 기반 사이드 프로젝트 개발 및 내부 배포 (1차 개발)</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://notion.so/side-project">사이드 프로젝트 관련 노션</a>
+          <a class="link-chip" href="https://side.gsitm.internal">사이드 프로젝트 배포 링크</a>
+        </div>
+      </li>
+      <li class="item">
+        <span class="item-text">IT News Auto Scraping</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://notion.so/it-news-scraping">시스템 아키텍처</a>
+        </div>
+      </li>
+    </ul>
+    <div class="members">
+      <span class="members-label">수행인력</span>
+      <span class="member-chip">장규현</span>
+      <span class="member-chip">이향지</span>
+    </div>
+  </div>
+</div>
+
+<!-- 세부실행과제 2 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-badge badge-task">세부실행과제 2</span>
+    <span class="section-title">디자인 프리셋 및 프론트 프레임워크 고도화</span>
+  </div>
+  <hr class="section-divider">
+  <div class="block">
+    <div class="block-title">디자인시스템 개선 <span class="block-tag tag-ds">Design System</span></div>
+    <ul class="item-list">
+      <li class="item"><span class="item-text">React 19 및 주요 라이브러리 버전 업그레이드, tailwind.css 추가</span></li>
+      <li class="item"><span class="item-text">기존 컴포넌트 React 19버전, TypeScript 및 tailwind.css 적용 및 수정</span></li>
+      <li class="item"><span class="item-text">코드 리팩토링</span></li>
+      <li class="item"><span class="item-text">Shadcn/ui 커스텀 버전 컴포넌트 생성</span></li>
+      <li class="item"><span class="item-text">EChart.js 컴포넌트 추가 및 수정</span></li>
+      <li class="item"><span class="item-text">디자인시스템 Vue 버전 개선 — Grid, Tree 등 신규 라이브러리로 리팩토링</span></li>
+      <li class="item">
+        <span class="item-text">CI/CD 구축</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://github.com/gsitm/design-system-react">React 디자인 시스템</a>
+          <a class="link-chip" href="https://storybook-react.gsitm.internal">Storybook (React)</a>
+          <a class="link-chip" href="https://github.com/gsitm/design-system-vue">Vue 디자인 시스템</a>
+          <a class="link-chip" href="https://storybook-vue.gsitm.internal">Storybook (Vue)</a>
+        </div>
+      </li>
+      <li class="item">
+        <span class="item-text">디자인시스템 LLM-WIKI 생성</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://obsidian.gsitm.internal/graph">옵시디언 그래프뷰</a>
+          <a class="link-chip" href="https://notion.so/design-wiki">WIKI 정의</a>
+        </div>
+      </li>
+    </ul>
+    <div class="members">
+      <span class="members-label">수행인력</span>
+      <span class="member-chip">김명욱</span>
+      <span class="member-chip">장규현</span>
+      <span class="member-chip">홍혜민</span>
+      <span class="member-chip">이예진</span>
+      <span class="member-chip">이향지</span>
+      <span class="member-chip">송명화</span>
+    </div>
+  </div>
+</div>
+
+<!-- 진행 업무 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-badge badge-work">진행 업무</span>
+  </div>
+  <hr class="section-divider">
+  <div class="block">
+    <div class="block-title">
+      유통커머스본부 &gt; 개발지원팀 표준업무서비스 POC 지원
+      <span class="block-tag tag-poc">POC</span>
+      <span class="date-badge">2026.03 – 2026.05</span>
+    </div>
+    <ul class="item-list">
+      <li class="item">
+        <span class="item-text">디자인시스템 Vue 버전 커스텀</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://github.com/gsitm/poc-vue-custom">Vue 커스텀 리포</a>
+        </div>
+      </li>
+      <li class="item">
+        <span class="item-text">디자인시스템 Vue 버전 기반 샘플 페이지 제작</span>
+        <div class="item-links">
+          <a class="link-chip" href="https://poc-sample.gsitm.internal">샘플 페이지</a>
+          <a class="link-chip" href="https://notion.so/poc-report">산출물 보고서</a>
+        </div>
+      </li>
+    </ul>
+    <div class="members">
+      <span class="members-label">수행인력</span>
+      <span class="member-chip">김명욱</span>
+      <span class="member-chip">장규현</span>
+      <span class="member-chip">이향지</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
