@@ -13,7 +13,8 @@
   --tag-ds-bg: #e8eaf6; --tag-ds-text: #3949ab;
   --tag-poc-bg: #fff3e0; --tag-poc-text: #e65100;
 }
-body { font-family: 'Noto Sans KR', -apple-system, sans-serif; background: var(--bg); color: var(--text-primary); max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; line-height: 1.7; }
+html { background-color: #F2F5F6; padding: 25px; }
+body { font-family: 'Noto Sans KR', -apple-system, sans-serif; border-radius: 13px; background: var(--bg); color: var(--text-primary); max-width: 780px; margin: 0 auto; padding: 3rem 2rem; line-height: 1.7; }
 .header { margin-bottom: 3rem; }
 .header-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
 .header-title { font-size: 30px; font-weight: 600; letter-spacing: -0.5px; color: var(--text-primary); margin-bottom: 6px; }
